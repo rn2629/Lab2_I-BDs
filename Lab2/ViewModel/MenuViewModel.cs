@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using Lab2.Command;
 using Lab2.Model;
@@ -13,40 +14,40 @@ namespace Lab2.ViewModel
 {
     internal class MenuViewModel
     {
-        private Usager _Usager;
         private InfoSauvegardeViewModel childViewModel;
-        private MenuViewModel checkMenuvm;
+       // private MenuViewModel checkMenuvm;
+        public ICommand Save
+        { get; set; }
+
+        public ICommand Quit { get; set; }
 
         public MenuViewModel()
         {
-            _Usager = new Usager("Rodrigue");
             childViewModel = new InfoSauvegardeViewModel();
+            Save = new SauvegarderCommande(this);
+            Quit = new QuitterCommande(this);
           
         }
         public bool CanUpdate
         {
             get
             {
-                if (Usager == null)
-                {
-                    return false;
-                }
-                return !string.IsNullOrWhiteSpace(Usager.Name);
+                return true;
             }
         }
-        public Usager Usager
-        {
-            get { return Usager; }
-        }
+
         public ICommand ConnexionCommand
         {
             get;
             private set;
         }
         public void SaveChanges()
+        {                
+            MessageBox.Show("Vous avez bien Sauvegardé!");       
+        }
+        public void QuitChanges()
         {
-            Sauvegarde view = new Sauvegarde();
-            view.DataContext = childViewModel;
+            MessageBox.Show("Vous devez appuyez sur X en haut a droite pour quiter");
         }
 
     }

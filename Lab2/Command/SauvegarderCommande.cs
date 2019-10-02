@@ -11,15 +11,10 @@ namespace Lab2.Command
     class SauvegarderCommande:ICommand
     {
         private MenuViewModel _viewModel;
-        private MainViewModel mainViewModel;
 
         public SauvegarderCommande(MenuViewModel viewModel)
         { _viewModel = viewModel; }
 
-        public SauvegarderCommande(MainViewModel mainViewModel)
-        {
-            this.mainViewModel = mainViewModel;
-        }
 
         #region ICommand Members
 

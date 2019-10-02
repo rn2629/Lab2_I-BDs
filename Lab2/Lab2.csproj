@@ -68,9 +68,6 @@
     <Compile Include="View\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Sauvegarde.xaml.cs">
-      <DependentUpon>Sauvegarde.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\UsagerView.xaml.cs">
       <DependentUpon>UsagerView.xaml</DependentUpon>
     </Compile>
@@ -98,10 +95,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Menu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Sauvegarde.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

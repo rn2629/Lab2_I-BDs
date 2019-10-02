@@ -11,8 +11,8 @@
         <StackPanel Orientation="Vertical" Background="White">
             <Menu VerticalAlignment="Top">
                 <MenuItem HorizontalAlignment="Left" VerticalAlignment="Top" Header="_Actions">
-                    <MenuItem Header="_Sauvegarder" InputGestureText="Ctrl+S"/>
-                    <MenuItem Header="_Quitter" InputGestureText="Ctrl+Q"/>
+                <MenuItem Header="_Sauvegarder" InputGestureText="Ctrl+S" Command="{Binding Save}"/>
+                    <MenuItem Header="_Quitter" InputGestureText="Ctrl+Q" Command="{Binding Quit}"/>
                 </MenuItem>
             </Menu>
         </StackPanel>
